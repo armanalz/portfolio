@@ -1,0 +1,401 @@
+.main_wrapper {
+
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+
+    @include respond(tab-land) {
+             
+        height: 200vh;
+        
+    }
+
+    @include respond(tab-port) {
+             
+        height: 250vh;
+        
+    }
+
+    @include respond(phone) {
+             
+        height: 320vh;
+        
+    }
+}
+
+.home_wrapper {
+
+        background-color: $bg-color;
+        margin: 0;
+        padding:  8rem 0 0 8rem;
+        transition: all .6s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display:grid;
+        grid-template-rows:290px 190px 190px;
+        grid-template-columns: 1.2fr 1fr 2.2fr; 
+        grid-gap: 2.5rem;
+
+    @include respond(tab-land) {
+             
+        padding:  8rem 0 0 0;
+        grid-template-rows:repeat(5,1fr);
+        grid-template-columns:1fr 1fr; 
+        grid-gap: 0;
+       
+    }
+
+    @include respond(phone) {
+             
+     
+          grid-template-rows:repeat(7,1fr);
+        
+        
+       
+    }   
+
+    &--link {
+
+            height: 8rem;
+            width: 8rem;
+            padding: 2rem 0 0 1.5rem ;
+            position: absolute;
+            top:0px;
+            left: 0px;
+            transition: all 0s;
+       
+        &-p {
+
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+                -webkit-transform:translate3d(0,0,0);
+
+        }
+
+        & a {
+
+            color: $color-white;
+            text-decoration: none;
+            font-size: 1.6rem;
+          
+        }
+    }
+
+    &--text1 {
+      
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-family: $content-font;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $color-dark;
+
+       @include respond(tab-land) {
+
+            text-align: center;    
+            grid-column: 1/2;
+            grid-row: 2/3;
+            padding: 4rem .5rem 0 6rem;
+       
+       }
+
+       @include respond(phone) {
+                
+            grid-column: 1/-1;
+            grid-row: 2/3;
+            padding: 4rem 6rem 0 6rem;
+        
+       }
+
+    }
+
+    &--text2 {
+
+        font-family: $content-font;
+        font-size: 1.6rem;
+        color: $color-dark; 
+        grid-column: 1/2;
+        grid-row: 2/4;
+        margin-top: -15rem;
+
+       @include respond(tab-land) {
+
+            text-align: center;    
+            grid-column: 1/-1;
+            grid-row: 4/5;
+            padding: 0 10rem;
+            margin-top: 0;
+       
+       }
+
+       @include respond(phone) {
+             
+            padding: 0 6rem;
+            grid-column: 1/-1;
+            grid-row: 5/6;
+       
+      }
+
+     
+    }
+
+    &--text3 {
+
+        font-family: $content-font;
+        font-size: 1.6rem;
+        color: $color-dark; 
+        grid-column: 2/3;
+        grid-row: 1/2; 
+        border-top: $color-dark 2px solid;
+        padding: 1.5rem 0 0 0;
+        margin: 0 3.5rem;
+        
+
+       @include respond(tab-land) {
+
+            text-align: center;    
+            grid-column: 2/3;
+            grid-row: 2/3;
+            padding: 2rem 6rem 0 .5rem;
+            margin: 4rem 3.5rem 0 3.5rem;
+       
+       }
+
+       @include respond(phone) {
+                    
+            grid-column: 1/-1;
+            grid-row: 3/4;
+            padding: 4rem 6rem 0 6rem;
+        
+        }
+
+       & > a:link,
+       & > a:visited {
+
+            color: $color-white;
+            font-family: $content-font;
+            text-decoration: none;
+
+       }
+
+       & > a:hover {
+        
+             text-decoration:underline;
+
+       }
+
+    }
+
+    &--text4 {
+      
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin: -9rem 3.5rem 0 3.5rem;
+        display: flex;
+        flex-direction: column;
+
+        @include respond(tab-land) {
+
+            text-align: center;    
+            grid-column: 1/-1;
+            grid-row: 3/4;
+            margin: 2rem 26rem 0 26rem;
+
+       
+        }
+
+        @include respond(tab-port) {
+             
+            margin: 2rem 16rem 0 16rem;
+        
+        }
+
+
+        @include respond(phone) {
+
+            margin: 5rem 6rem 0 6rem;
+            grid-column: 1/-1;
+            grid-row: 4/5;
+                
+        }
+
+      
+       &-a:link,
+       &-a:visited {
+
+           border-bottom: $border-color 1px solid;
+           padding-bottom: .5rem;
+           font-size: 1.5rem;
+           color: $color-dark;
+           font-family: $content-font;
+           text-decoration: none;
+       }
+
+       &-a:hover {
+        
+          color: $color-white;
+        
+       }
+    }
+
+    &--text5 {
+
+        border-top: $color-dark 2px solid;
+        padding: 2rem 0 0 0;
+        margin: -16.5rem 3.5rem 0 3.5rem;
+        grid-column: 2/3;
+        grid-row: 3/4; 
+        font-family: $content-font; 
+        font-size: 1.6rem;
+        color: $color-dark;
+
+
+       @include respond(tab-land) {
+
+            text-align: center;     
+            grid-column: 1/-1;
+            grid-row: 6/7;
+            padding: 3rem 17.5rem;
+            margin: -20rem 3.5rem 0 3.5rem;
+       
+       }
+
+       @include respond(tab-port) {
+
+            grid-column: 1/-1;
+            grid-row: 7/8;   
+            padding: 3rem 11rem;
+            margin: -12rem 3.5rem 0 3.5rem;
+       
+       }
+
+       @include respond(phone) {
+
+            padding: 3rem 6rem;
+            margin: -13rem 3.5rem 0 3.5rem;
+         
+       }
+
+       & > span {
+
+            font-family: $qoute-font;
+            font-size: 6rem;
+            line-height: 2rem;
+            color: $content-font;
+        
+       }
+
+       & > p {
+
+           margin-top: -1.6rem;
+
+       }
+
+    }
+
+    &--text6 {
+       
+        grid-column: 3/4;
+        grid-row: 1/-1;
+        font-size: 11.5rem;
+        color: $color-dark;
+        text-transform: uppercase;
+        font-family: $title-font;
+        line-height: 11.5rem;
+
+        @include respond(tab-land) {
+             
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            text-align: center;
+            padding: 0 5rem;
+            line-height: 10rem;
+            font-size: 10rem;
+        
+        }
+
+        @include respond(phone) {
+
+            padding: 0 3.5rem;    
+            line-height: 8rem;
+            font-size: 8rem;
+         
+        }
+
+    }
+}
+
+.contact_wrapper {
+
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        left:0;
+        right:0;
+        top:0;
+        bottom: 0;
+        background-color: $color-white;
+        box-shadow: 2px 2px 5px 5px $color-gray;
+        transition: all .4s;
+   
+
+        &--link {
+
+            height: 10rem;
+            width: 12rem;
+            padding: 1rem 0 0 1rem ;
+            position: absolute;
+            top:0px;
+            left: 0px;
+        }
+
+}
+
+.blog_wrapper {
+
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        left:0;
+        right:0;
+        top:0;
+        bottom: 0;
+        background-color: $color-white;
+        box-shadow:inset 1px 1px 5px 1px $color-gray;
+        transition: all .4s;
+
+        &--link {
+
+            height: 10rem;
+            width: 12rem;
+            padding: 1rem 0 0 1rem ;
+            position: absolute;
+            top:0px;
+            left: 0px;
+
+        }
+
+}
+
+.hovered1 {
+
+            transform: rotate(-3deg) translateX(80px) translateY(30px);
+            box-shadow: 2px 2px 5px 5px $color-gray-light;
+            border-radius: 3px;
+            margin: 0 0 -200px 0;
+}
+
+.hovered2 {
+
+    transform: rotate(-3deg) translateX(80px) translateY(30px);
+    box-shadow: 2px 2px 5px 5px $color-gray-light;
+    border-radius: 3px;
+    margin: 0 0 -200px 0;
+}
+
+
