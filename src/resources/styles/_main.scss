@@ -62,27 +62,27 @@
 
             height: 8rem;
             width: 8rem;
-            padding: 2rem 0 0 1.5rem ;
+            padding: 2rem 0 0 2rem ;
             position: absolute;
             top:0px;
             left: 0px;
             transition: all 0s;
        
-        &-p {
+        &-icon {
 
-                -webkit-backface-visibility: hidden;
-                backface-visibility: hidden;
-                -moz-backface-visibility: hidden;
-                -webkit-transform:translate3d(0,0,0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3.6rem;
+            width: 3.6rem;
+            border-radius: 50%;
+            cursor: pointer;
 
-        }
+            &:hover {
 
-        & a {
+                background: rgba($color-dark , .1);
+            }
 
-            color: $color-white;
-            text-decoration: none;
-            font-size: 1.6rem;
-          
         }
     }
 
@@ -382,20 +382,56 @@
 
 }
 
-.hovered1 {
+#menu-icon {
 
-            transform: rotate(-3deg) translateX(80px) translateY(30px);
-            box-shadow: 2px 2px 5px 5px $color-gray-light;
-            border-radius: 3px;
-            margin: 0 0 -200px 0;
+    height: 2.4rem;
+    width: 2.4rem;
+    fill: $color-dark;
 }
 
-.hovered2 {
+.home-hovered1 {
 
-    transform: rotate(-3deg) translateX(80px) translateY(30px);
-    box-shadow: 2px 2px 5px 5px $color-gray-light;
-    border-radius: 3px;
-    margin: 0 0 -200px 0;
+            transform: rotate(-3deg) translateX(8rem) translateY(3rem);
+            box-shadow: 2px 2px 5px 5px $color-gray-light;
+            border-radius: 3px;
+            margin: 0 0 -20rem 0;
+}
+
+
+
+.home-hovered2 {
+
+            transform: rotate(-3deg) translateX(13rem) translateY(8.5rem);
+            box-shadow: 2px 2px 5px 5px $color-gray-light;
+            border-radius: 3px;
+            margin: 0 0 -20rem 0;
+}
+
+.home-visible {
+
+        transform: rotate(-3deg) translateX(10rem) translateY(8.5rem);
+        box-shadow: 2px 2px 5px 5px $color-gray-light;
+        border-radius: 3px;
+        margin: 0 0 -20rem 0;
+
+     
+}
+
+.contact-hovered2 {
+
+        transform: rotate(-1.6deg) translateX(6.5rem) translateY(4rem);
+        box-shadow: 2px 2px 5px 5px $color-gray-light;
+        border-radius: 3px;
+        margin: 0 0 -20rem 0;
+}
+
+.contact-visible {
+
+        transform: rotate(-1.6deg) translateX(3.5rem) translateY(4rem);
+        box-shadow: 2px 2px 5px 5px $color-gray-light;
+        border-radius: 3px;
+        margin: 0 0 -20rem 0;
+
 }
 
 

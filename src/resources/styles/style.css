@@ -70,20 +70,21 @@ COLORS
   .home_wrapper--link {
     height: 8rem;
     width: 8rem;
-    padding: 2rem 0 0 1.5rem;
+    padding: 2rem 0 0 2rem;
     position: absolute;
     top: 0px;
     left: 0px;
     transition: all 0s; }
-    .home_wrapper--link-p {
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
-      -webkit-transform: translate3d(0, 0, 0); }
-    .home_wrapper--link a {
-      color: #FDFDFD;
-      text-decoration: none;
-      font-size: 1.6rem; }
+    .home_wrapper--link-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.6rem;
+      width: 3.6rem;
+      border-radius: 50%;
+      cursor: pointer; }
+      .home_wrapper--link-icon:hover {
+        background: rgba(2, 1, 1, 0.1); }
   .home_wrapper--text1 {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -270,16 +271,39 @@ COLORS
     top: 0px;
     left: 0px; }
 
-.hovered1 {
-  transform: rotate(-3deg) translateX(80px) translateY(30px);
-  box-shadow: 2px 2px 5px 5px #bbbbbb;
-  border-radius: 3px;
-  margin: 0 0 -200px 0; }
+#menu-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: #020101; }
 
-.hovered2 {
-  transform: rotate(-3deg) translateX(80px) translateY(30px);
+.home-hovered1 {
+  transform: rotate(-3deg) translateX(8rem) translateY(3rem);
   box-shadow: 2px 2px 5px 5px #bbbbbb;
   border-radius: 3px;
-  margin: 0 0 -200px 0; }
+  margin: 0 0 -20rem 0; }
+
+.home-hovered2 {
+  transform: rotate(-3deg) translateX(13rem) translateY(8.5rem);
+  box-shadow: 2px 2px 5px 5px #bbbbbb;
+  border-radius: 3px;
+  margin: 0 0 -20rem 0; }
+
+.home-visible {
+  transform: rotate(-3deg) translateX(10rem) translateY(8.5rem);
+  box-shadow: 2px 2px 5px 5px #bbbbbb;
+  border-radius: 3px;
+  margin: 0 0 -20rem 0; }
+
+.contact-hovered2 {
+  transform: rotate(-1.6deg) translateX(6.5rem) translateY(4rem);
+  box-shadow: 2px 2px 5px 5px #bbbbbb;
+  border-radius: 3px;
+  margin: 0 0 -20rem 0; }
+
+.contact-visible {
+  transform: rotate(-1.6deg) translateX(3.5rem) translateY(4rem);
+  box-shadow: 2px 2px 5px 5px #bbbbbb;
+  border-radius: 3px;
+  margin: 0 0 -20rem 0; }
 
 /*# sourceMappingURL=style.css.map */

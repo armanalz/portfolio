@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 
 class Main extends Component {
@@ -11,7 +9,24 @@ class Main extends Component {
         hovered2:false,
         hovered3:false,
         clicked:false,
-        popupVisible:false
+        popupVisible:false,
+        resize: false
+    }
+
+    componentDidMount() {
+
+        window.addEventListener('resize',this.resizeHandler);
+
+    }
+
+    resizeHandler = () => {
+
+        this.setState({
+
+            resize:true
+          
+        })
+
     }
 
 
@@ -103,52 +118,40 @@ class Main extends Component {
 
     render() {
 
-       let homeTransform=""
-       let contactTransform=""
-       let homeRadius=""
-       let contactRadius=""
-       let bottom=""
-       let boxShadow=""
+       let homeClass = ""
+       let contactClass = ""
        const winwidth=window.innerWidth
        
-       if (this.state.hovered1 && this.state.hovered2 && winwidth>1200) {
-          homeTransform="rotate(-3deg) translateX(130px) translateY(85px)"
-          contactTransform="rotate(-1.6deg) translateX(65px) translateY(40px)"
-          boxShadow= "2px 2px 5px 5px #bbb"
-          homeRadius="3px"
-          contactRadius="3px"
-          bottom="0 0 -200px 0"
+       if (this.state.hovered1 && this.state.hovered2 && winwidth > 1200) {
+
+               homeClass = "home-hovered2"
+               contactClass = "contact-hovered2"
          
-       }else if(this.state.hovered1 && winwidth>1200){
-            homeTransform="rotate(-3deg) translateX(80px) translateY(30px)"
-            boxShadow= "2px 2px 5px 5px #bbb"
-            homeRadius="3px"
-            bottom="0 0 -200px 0"
+       }else if(this.state.hovered1 && winwidth > 1200) {
 
-       }else if(this.state.hovered2 && winwidth>1200){
-            contactTransform="rotate(-1.6deg) translateX(65px) translateY(40px)"
-            homeTransform="rotate(-3deg) translateX(130px) translateY(85px)"
-            boxShadow= "2px 2px 5px 5px #bbb"
-            homeRadius="3px"
-            contactRadius="3px"
-            bottom="0 0 -200px 0"
+               homeClass = "home-hovered1"
 
-       }else if(this.state.hovered3 && winwidth>1200){
-        contactTransform="rotate(-1.6deg) translateX(65px) translateY(40px)"
-        homeTransform="rotate(-3deg) translateX(130px) translateY(85px)"
-        boxShadow= "2px 2px 5px 5px #bbb"
-        homeRadius="3px"
-        contactRadius="3px"
-        bottom="0 0 -200px 0"
+       }else if(this.state.hovered2 && winwidth > 1200) {
 
-      }else if(this.state.popupVisible && winwidth<1200){
-        contactTransform="rotate(-1.6deg) translateX(35px) translateY(40px)"
-        homeTransform="rotate(-3deg) translateX(100px) translateY(85px)"
-        boxShadow= "2px 2px 5px 5px #bbb"
-        homeRadius="3px"
-        contactRadius="3px"
-        bottom="0 0 -200px 0"
-   }
+               homeClass = "home-hovered2"
+               contactClass = "contact-hovered2"
+
+       }else if(this.state.hovered3 && winwidth > 1200) {
+          
+               homeClass = "home-hovered2"
+               contactClass = "contact-hovered2"
+
+      }else if(this.state.popupVisible && winwidth < 1200) {
+
+               homeClass = "home-visible"
+               contactClass = "contact-visible"
+
+      }else if (this.state.resize) {
+
+               homeClass = ""
+               contactClass = ""
+
+      }
 
         return (
 
@@ -161,40 +164,38 @@ class Main extends Component {
                                  onClick={()=>{this.setState({clicked:true})}}
                          >
                             <p style={{zIndex:"10"}}>
-                                  <Button >Click Here</Button>
+                                  Blog
                             </p>
                          </div>
                   </div>
 
-                  <div className="contact_wrapper"
-                          style={{transform:contactTransform,borderRadius:contactRadius,margin:bottom}}
-                  >
+                  <div className={`contact_wrapper ${contactClass}`}>
                             <div className="contact_wrapper--link"
                                  onMouseOver={()=>this.mouseOverHandler2()}
                                  onMouseLeave={()=>this.mouseLeaveHandler2()}
                                  onClick={()=>{this.setState({clicked:true})}}
                             >
                                 <p>
-                                    <Button>Click Here</Button>
+                                    Contact
                                 </p>
                             </div>
                   </div>
 
-                  <div className="home_wrapper" 
-                       style={{transform:homeTransform ,borderRadius:homeRadius,margin:bottom,
-                               boxShadow:boxShadow}}
-                  >
+                  <div className={`home_wrapper ${homeClass}`} >
+
                         <div className="home_wrapper--link" 
                              onMouseOver={()=>this.mouseOverHandler1() }
                              onMouseLeave={()=>this.mouseLeaveHandler1()}
-                              >
+                        >
                    
-                            <div style={{fontSize:"25px",letterSpacing:"2px",height:"40px",width:"40px"}}
-                             onClick={()=>this.handleClick()}>
-                                
-                               <Button><MenuIcon style={{color:"#020101",height:"26px",width:"26px"}}/></Button> 
+                            <div className="home_wrapper--link-icon"
+                                 onClick={()=>this.handleClick()}
+                            >                              
+                               
+                                    <MenuIcon id="menu-icon"/>                               
                                 
                             </div>
+
                         </div>
 
                         <div className="home_wrapper--text1" >
@@ -248,8 +249,8 @@ class Main extends Component {
                             <span>"</span><br/>
                                 <p>
                                 ipsum dolor sit, amet  adipisicing elit.
-                                Animi architecto id eos fuga corporis, cum enim, 
-                                velit magni ea sapiente,
+                                Animi corporis, cum enim 
+                                velit magni ea sapiente.
                                 </p>
                                 <br/>
                             <span>"</span>
