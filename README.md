@@ -1,4 +1,4 @@
-This project (https://armanalz.github.io/portfolio/).
+This project deployed [Here](https://armanalz.github.io/portfolio/).
 
 ## Portfolio
 
