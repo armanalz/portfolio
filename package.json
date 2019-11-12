@@ -1,11 +1,12 @@
 {
   "name": "portfolio",
-  "homepage": "https://armanalz.github.io/portfolio/",
   "version": "0.1.0",
+  "homepage": "https://armanalz.github.io/portfolio/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.6.0",
     "@material-ui/icons": "^4.5.1",
+    "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
