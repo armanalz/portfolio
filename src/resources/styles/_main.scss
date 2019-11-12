@@ -36,7 +36,7 @@
         top: 0;
         bottom: 0;
         display:grid;
-        grid-template-rows:290px 190px 190px;
+        grid-template-rows:29rem 19rem 19rem;
         grid-template-columns: 1.2fr 1fr 2.2fr; 
         grid-gap: 2.5rem;
 
@@ -185,7 +185,7 @@
 
        & > a:hover {
         
-             text-decoration:underline;
+             text-decoration: underline;
 
        }
 
@@ -361,12 +361,12 @@
         position: absolute;
         margin: 0;
         padding: 0;
-        left:0;
-        right:0;
-        top:0;
+        left: 0;
+        right: 0;
+        top: 0;
         bottom: 0;
         background-color: $color-white;
-        box-shadow:inset 1px 1px 5px 1px $color-gray;
+        box-shadow: inset 1px 1px 5px 1px $color-gray;
         transition: all .4s;
 
         &--link {
@@ -375,7 +375,7 @@
             width: 12rem;
             padding: 1rem 0 0 1rem ;
             position: absolute;
-            top:0px;
+            top: 0px;
             left: 0px;
 
         }
@@ -389,12 +389,17 @@
     fill: $color-dark;
 }
 
-.home-hovered1 {
+.hover-const {
 
-            transform: rotate(-3deg) translateX(8rem) translateY(3rem);
             box-shadow: 2px 2px 5px 5px $color-gray-light;
             border-radius: 3px;
             margin: 0 0 -20rem 0;
+}
+
+.home-hovered1 {
+
+            transform: rotate(-3deg) translateX(8rem) translateY(3rem);
+
 }
 
 
@@ -402,35 +407,23 @@
 .home-hovered2 {
 
             transform: rotate(-3deg) translateX(13rem) translateY(8.5rem);
-            box-shadow: 2px 2px 5px 5px $color-gray-light;
-            border-radius: 3px;
-            margin: 0 0 -20rem 0;
 }
 
 .home-visible {
 
         transform: rotate(-3deg) translateX(10rem) translateY(8.5rem);
-        box-shadow: 2px 2px 5px 5px $color-gray-light;
-        border-radius: 3px;
-        margin: 0 0 -20rem 0;
-
      
 }
 
 .contact-hovered2 {
 
         transform: rotate(-1.6deg) translateX(6.5rem) translateY(4rem);
-        box-shadow: 2px 2px 5px 5px $color-gray-light;
-        border-radius: 3px;
-        margin: 0 0 -20rem 0;
+
 }
 
 .contact-visible {
 
         transform: rotate(-1.6deg) translateX(3.5rem) translateY(4rem);
-        box-shadow: 2px 2px 5px 5px $color-gray-light;
-        border-radius: 3px;
-        margin: 0 0 -20rem 0;
 
 }
 

@@ -55,7 +55,7 @@ COLORS
   top: 0;
   bottom: 0;
   display: grid;
-  grid-template-rows: 290px 190px 190px;
+  grid-template-rows: 29rem 19rem 19rem;
   grid-template-columns: 1.2fr 1fr 2.2fr;
   grid-gap: 2.5rem; }
   @media only screen and (max-width: 75em) {
@@ -276,34 +276,24 @@ COLORS
   width: 2.4rem;
   fill: #020101; }
 
-.home-hovered1 {
-  transform: rotate(-3deg) translateX(8rem) translateY(3rem);
+.hover-const {
   box-shadow: 2px 2px 5px 5px #bbbbbb;
   border-radius: 3px;
   margin: 0 0 -20rem 0; }
+
+.home-hovered1 {
+  transform: rotate(-3deg) translateX(8rem) translateY(3rem); }
 
 .home-hovered2 {
-  transform: rotate(-3deg) translateX(13rem) translateY(8.5rem);
-  box-shadow: 2px 2px 5px 5px #bbbbbb;
-  border-radius: 3px;
-  margin: 0 0 -20rem 0; }
+  transform: rotate(-3deg) translateX(13rem) translateY(8.5rem); }
 
 .home-visible {
-  transform: rotate(-3deg) translateX(10rem) translateY(8.5rem);
-  box-shadow: 2px 2px 5px 5px #bbbbbb;
-  border-radius: 3px;
-  margin: 0 0 -20rem 0; }
+  transform: rotate(-3deg) translateX(10rem) translateY(8.5rem); }
 
 .contact-hovered2 {
-  transform: rotate(-1.6deg) translateX(6.5rem) translateY(4rem);
-  box-shadow: 2px 2px 5px 5px #bbbbbb;
-  border-radius: 3px;
-  margin: 0 0 -20rem 0; }
+  transform: rotate(-1.6deg) translateX(6.5rem) translateY(4rem); }
 
 .contact-visible {
-  transform: rotate(-1.6deg) translateX(3.5rem) translateY(4rem);
-  box-shadow: 2px 2px 5px 5px #bbbbbb;
-  border-radius: 3px;
-  margin: 0 0 -20rem 0; }
+  transform: rotate(-1.6deg) translateX(3.5rem) translateY(4rem); }
 
 /*# sourceMappingURL=style.css.map */

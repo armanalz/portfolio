@@ -124,27 +124,27 @@ class Main extends Component {
        
        if (this.state.hovered1 && this.state.hovered2 && winwidth > 1200) {
 
-               homeClass = "home-hovered2"
-               contactClass = "contact-hovered2"
+               homeClass = "hover-const home-hovered2"
+               contactClass = "hover-const contact-hovered2"
          
        }else if(this.state.hovered1 && winwidth > 1200) {
 
-               homeClass = "home-hovered1"
+               homeClass = "hover-const home-hovered1"
 
        }else if(this.state.hovered2 && winwidth > 1200) {
 
-               homeClass = "home-hovered2"
-               contactClass = "contact-hovered2"
+               homeClass = "hover-const home-hovered2"
+               contactClass = "hover-const contact-hovered2"
 
        }else if(this.state.hovered3 && winwidth > 1200) {
           
-               homeClass = "home-hovered2"
-               contactClass = "contact-hovered2"
+               homeClass = "hover-const home-hovered2"
+               contactClass = "hover-const contact-hovered2"
 
       }else if(this.state.popupVisible && winwidth < 1200) {
 
-               homeClass = "home-visible"
-               contactClass = "contact-visible"
+               homeClass = "hover-const home-visible"
+               contactClass = "hover-const contact-visible"
 
       }else if (this.state.resize) {
 
